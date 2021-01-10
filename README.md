@@ -1,4 +1,4 @@
-# PROJECT 03: Data Warehouse
+# PROJECT 03: Data Warehouse on AWS
 
 # 1. Overview
 
