@@ -2,7 +2,7 @@
 
 # 1. Overview
 
-The project "Data Warehouse" is to help Sparkify, a music stream startup, to process the data stored as JSON in AWS S3 buckets into Redshift Cluster. The main purpose is to provide the analytical data to answer the business questions like "what songs do the users listen to?". A ETL pipeline which includes the functionalities like creating tables in Redshift Cluster, copying JSON file from S3 to tables and inserting data into the tables under the star schema in Redshift is built.
+The project "Data Warehouse on AWS" is to help Sparkify, a music stream startup, to process the data stored as JSON in AWS S3 buckets into Redshift Cluster. The main purpose is to provide the analytical data to answer the business questions like "what songs do the users listen to?". A ETL pipeline which includes the functionalities like creating tables in Redshift Cluster, copying JSON file from S3 to tables and inserting data into the tables under the star schema in Redshift is built.
 
 # 2. Data
 The data set in this project contains two parts with JSON format resided in S3:
