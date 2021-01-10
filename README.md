@@ -44,56 +44,56 @@ The database design for Sparkify is based on the idea of the data warehouse proc
 
 - **staging_events**: 
 
-Fields: event_id, artist, auth, first_name, gender, item_session, last_name, length, level, location, method, page , registration, session_id, song, status, ts, user_agent, user_id
+    Fields: event_id, artist, auth, first_name, gender, item_session, last_name, length, level, location, method, page , registration, session_id, song, status, ts, user_agent, user_id
 
 
-Table optimization: session_id as the **SORTKEY and DISTKEY**
+    Table optimization: session_id as the **SORTKEY and DISTKEY**
 
 - **staging_songs**: 
 
-Fields: num_songs, artist_id, artist_latitude, artist_longitude, artist_location, artist_name, song_id, title, duration, year
+    Fields: num_songs, artist_id, artist_latitude, artist_longitude, artist_location, artist_name, song_id, title, duration, year
 
 
-Table optimization: artist_id as the **SORTKEY and DISTKEY**
+    Table optimization: artist_id as the **SORTKEY and DISTKEY**
 
 ### Fact Table
 
 - **songplays**: 
 
-Fields: songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
+    Fields: songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
 
 
-Table optimization: set the songplay_id as **SORTKEY** and set the user_id as **DISTKEY**
+    Table optimization: set the songplay_id as **SORTKEY** and set the user_id as **DISTKEY**
 
 ### Dimension Tables
 
 - **users**: 
 
-Fields: user_id, first_name, last_name, gender, level
+    Fields: user_id, first_name, last_name, gender, level
 
 
-Table optimization: set the user_id as **SORTKEY** and **distribution all**
+    Table optimization: set the user_id as **SORTKEY** and **distribution all**
 
 - **songs**: 
 
-Fields: song_id, title, artist_id, year, duration
+    Fields: song_id, title, artist_id, year, duration
 
 
-Table optimization: set the song_id as **SORTKEY** and **distribution all**
+    Table optimization: set the song_id as **SORTKEY** and **distribution all**
 
 - **artists**: 
 
-Fields: artist_id, name, location, latitude, longitude
+    Fields: artist_id, name, location, latitude, longitude
 
 
-Table optimization: set the artist_id as **SORTKEY** and **distribution all**
+    Table optimization: set the artist_id as **SORTKEY** and **distribution all**
 
 - **time**: 
 
-Fields: start_time, hour, day, week, month, year, weekday
+    Fields: start_time, hour, day, week, month, year, weekday
 
 
-Table optimization: set the start_time as **SORTKEY** and **distribution all**
+    Table optimization: set the start_time as **SORTKEY** and **distribution all**
 
 # 5. The project files:
 
