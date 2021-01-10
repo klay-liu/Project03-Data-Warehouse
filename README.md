@@ -31,8 +31,8 @@ example data:
 # 4. Database Design
 The database design for Sparkify is based on the idea of the data warehouse processing and it has staging tables and analytics tables. The staging tables include staging_events and staging_songs which store the source data reside in S3 buckets. The analytics tables follow the star schema where the fact table songplays contains the business data that can answer the questions like "what songs do the user listen to?" and the dimension tables provide the corresponding data info. Below is the star schema illustration:
 
-![Staging Tables](https://user-images.githubusercontent.com/30792411/104114201-9d789280-533c-11eb-9243-64600bfda47b.jpeg)
-![Star Schema Design for songplays](https://user-images.githubusercontent.com/30792411/104114202-9fdaec80-533c-11eb-9095-d6eb09e87a6f.jpeg)
+![Staging Tables](https://github.com/klay-liu/Project03-Data-Warehouse-On-AWS/blob/master/Staging%20Tables.jpeg)
+![Star Schema Design for songplays](https://github.com/klay-liu/Project03-Data-Warehouse-On-AWS/blob/master/Star%20Schema%20Design%20for%20songplays.jpeg)
 
 
 ### Redshift Cluster configuration
@@ -74,10 +74,15 @@ Table optimization: set the start_time as **SORTKEY** and **distribution all**
 # 5. The project files:
 
 `create_table.py` is to create the fact and dimension tables for the star schema in Redshift.
+
 `etl.py` is to load data from S3 into staging tables on Redshift and then process that data into the analytics tables on Redshift.
+
 `sql_queries.py` to define the **DROP, CREATE, INSERT INTO** SQL statements, which will be imported into the two other files above.
+
 `README.md`  - Description for the project
+
 `dwh.cfg` - A configuration file containing the dependance parameters
+
 `Create Data Warehouse in AWS Redshift.ipynb` - An option to substitute the functionalities of the `create_table.py` and `etl.py` as well as the AWS IAM Role
 
 # 6. Data Process
